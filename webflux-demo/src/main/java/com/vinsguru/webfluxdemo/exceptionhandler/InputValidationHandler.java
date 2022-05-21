@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 @ControllerAdvice
 public class InputValidationHandler {
-
     @ExceptionHandler(InputValidationException.class)
     public ResponseEntity<InputFailedValidationResponse> handleException(InputValidationException ex){
         InputFailedValidationResponse response = new InputFailedValidationResponse();
@@ -17,5 +16,4 @@ public class InputValidationHandler {
         response.setMessage(ex.getMessage());
         return ResponseEntity.badRequest().body(response);
     }
-
 }

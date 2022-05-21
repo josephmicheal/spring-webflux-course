@@ -23,7 +23,7 @@ public class ReactiveMathService {
                     .doOnNext(i -> System.out.println("reactive-math-service processing : " + i))
                     .map(i -> new Response(i * input));
     }
-
+    // This is used for exception testing
     public Mono<Response> multiply(Mono<MultiplyRequestDto> dtoMono){
         return dtoMono
                     .map(dto -> dto.getFirst() * dto.getSecond())

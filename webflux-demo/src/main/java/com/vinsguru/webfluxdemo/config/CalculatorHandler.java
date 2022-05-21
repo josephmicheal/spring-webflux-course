@@ -13,7 +13,7 @@ public class CalculatorHandler {
     //creating multiple handlers intentionally
     // calculator/{a}/{b}
     public Mono<ServerResponse> additionHandler(ServerRequest request){
-        return process(request, (a, b) -> ServerResponse.ok().bodyValue(a + b));
+        return process(request, (a, b) -> ServerResponse.ok().bodyValue(a + b   ));
     }
 
     public Mono<ServerResponse> subtractionHandler(ServerRequest request){
